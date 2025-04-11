@@ -26,3 +26,5 @@ message(STATUS "ASan активирован для MSVC")
 project(oop_misis_lab3)
 
 add_executable(memory_leak new_delete_memory_leak.cpp)
+add_executable(unique unique_ptr.cpp)
+add_executable(shared share_ptr.cpp)
