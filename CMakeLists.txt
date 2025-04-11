@@ -14,6 +14,14 @@ else()
   set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/bin.${build_suffix}.rel)
   set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/bin.${build_suffix}.relwithdbg)
 endif()
+add_compile_options(
+    /fsanitize=address 
+    /Zi 
+    /DEBUG 
+    /MT      # Использовать статическую CRT (/MT вместо /MD)
+)
+add_link_options(/INCREMENTAL:NO)
+message(STATUS "ASan активирован для MSVC")
 
 project(oop_misis_lab3)
 
