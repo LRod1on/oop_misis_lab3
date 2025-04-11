@@ -18,7 +18,7 @@ add_compile_options(
     /fsanitize=address 
     /Zi 
     /DEBUG 
-    /MT      # Использовать статическую CRT (/MT вместо /MD)
+    /MT     
 )
 add_link_options(/INCREMENTAL:NO)
 message(STATUS "ASan активирован для MSVC")
