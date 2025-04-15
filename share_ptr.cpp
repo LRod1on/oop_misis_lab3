@@ -5,9 +5,13 @@ class Data {
 public:
     int value;
     // конструктор класса, создает число
-    Data(int v) : value(v) { std::cout << "Data created" << std::endl; }
+    Data(int v) : value(v) {
+        std::cout << "Data created" << std::endl; 
+    }
     // деструктор класса, уничтожает число
-    ~Data() { std::cout << "Data destroyed" << std::endl; }
+    ~Data() { 
+        std::cout << "Data destroyed" << std::endl; 
+    }
 };
 
 int main() {
